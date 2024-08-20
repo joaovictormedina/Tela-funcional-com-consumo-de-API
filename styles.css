@@ -1,0 +1,89 @@
+/* Reset básico de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para o cabeçalho */
+.header {
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 103px;
+    background: rgba(12, 112, 242, 1);
+    opacity: 1; /* Torna a divisão visível */
+    display: flex; /* Permite o layout de itens flexíveis */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: space-between; /* Distribui espaço entre o conteúdo */
+    padding: 0 56px; /* Adiciona espaço interno à divisão */
+}
+
+/* Estilo para o texto do cabeçalho */
+.header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 60.51px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1); /* Cor do texto */
+}
+
+/* Estilo para os textos à direita no cabeçalho */
+.text-right {
+    display: flex; /* Alinha os textos horizontalmente */
+    gap: 40px; /* Espaço entre os textos */
+    align-items: center; /* Alinha verticalmente os textos com o texto "DncWeather" */
+}
+
+.text-right p {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 30.26px;
+    text-align: left;
+    color: #FFFFFF; /* Cor do texto */
+}
+
+/* Estilo para a segunda divisão */
+.second-section {
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 2881px;
+    background: #F2F2F2; /* Cor de fundo da divisão */
+    border: 1px solid #BABABA; /* Borda ao redor da divisão */
+    display: flex; /* Permite o layout de itens flexíveis */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+    margin-top: -1px; /* Remove o espaço entre a primeira e a segunda divisão */
+}
+
+/* Estilo para a divisão interna da segunda divisão */
+.inner-content {
+    display: flex; /* Alinha o texto e a imagem horizontalmente */
+    align-items: center; /* Alinha verticalmente o texto e a imagem */
+    gap: 20px; /* Espaço entre o texto e a imagem */
+    margin-top: 70px; /* Espaço de 70px do topo da segunda divisão */
+}
+
+/* Estilo para o texto dentro da divisão interna da segunda divisão */
+.text-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 60.51px;
+    text-align: left; /* Alinha o texto à esquerda dentro do contêiner */
+    color: #1F1F1F;
+    margin-right: 20px; /* Espaço entre o texto e a imagem */
+    z-index: 1; /* Garante que o texto apareça acima da imagem se necessário */
+}
+
+/* Estilo para a imagem dentro da divisão interna da segunda divisão */
+.clouds-image {
+    width: 255px;
+    height: 197px;
+    margin-top: -50px; /* Ajusta a imagem para 50px acima do texto */
+}
