@@ -69,6 +69,7 @@ body {
     font-weight: 800;
     color: #1F1F1F;
     margin-right: 20px;
+    margin-top: 130px;
 }
 
 /* Estilo para a imagem dentro da divisão interna da segunda divisão */
@@ -85,7 +86,7 @@ body {
     background: #FFFFFF;
     padding: 30px;
     position: relative;
-    margin-top: 30px;
+    margin-top: 150px;
 }
 
 /* Estilo para o container do formulário */
@@ -159,40 +160,140 @@ body {
     height: 56px;
     border-radius: 10px;
     background-color: rgba(12, 112, 242, 0.9);
-    box-shadow: 0px 6px 4px 0px rgba(12, 112, 242, 0.25);
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Inter', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    text-align: center;
     border: none;
-    cursor: pointer;
-    margin: 110px 90px 50px; /* Ajustado para manter 30px abaixo dos formulários e 110px do topo da seção */
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 30px 90px; /* 90px de distância das bordas laterais */
 }
 
-/* Estilo para a nova seção abaixo do retângulo branco */
+/* Estilo para a seção de resultado */
 .result-section {
     width: 100vw;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 70px 56px;
-    background: #F2F2F2;
+    margin-top: 200px;
 }
 
+/* Estilo para o texto do resultado */
 .result-text {
     font-family: 'Inter', sans-serif;
     font-size: 50px;
     font-weight: 800;
-    line-height: 60.51px;
-    text-align: left;
-    color: rgba(31, 31, 31, 1);
-    flex: 1;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
+/* Estilo para a imagem do resultado */
 .result-image {
     width: 136px;
     height: 133px;
-    opacity: 0; /* Inicialmente invisível */
-    /* Ajustar posição da imagem conforme necessário */
 }
+
+/* Estilo para a seção do layout */
+.layout-section {
+    width: 1024px;
+    background: #0C70F2;
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Estilo para o conteúdo dentro da seção de layout */
+.layout-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    text-align: center;
+}
+
+/* Estilo para os textos dentro da seção de layout */
+.layout-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;    
+    width: 30%; /* Ajuste para distribuir igualmente */
+}
+
+.new-layout-section {
+    width: 1024px;
+    height: 72px;
+    top: 2124px;
+    gap: 0px;
+    border-radius: 0px 0px 30px 30px;
+    opacity: 0px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-layout-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    text-align: center;    
+}
+
+.new-layout-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    width: 30%; /* Ajuste para distribuir igualmente */
+}
+
+.weather-info-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.weather-info-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.weather-info-image {
+    width: 136px;
+    height: 133px;
+}
+
+.custom-layout-section {
+    width: 1024px;
+    height: 72px;
+    top: 2601px;
+    left: 312px;
+    gap: 0px;
+    border-radius: 30px;
+    opacity: 0px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(12, 112, 242, 1)
+}
+
+.custom-layout-content {
+    width: 80%;
+    }
+
+.custom-layout-content p {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24.2px;
+    text-align: center;
+    }
+
+
