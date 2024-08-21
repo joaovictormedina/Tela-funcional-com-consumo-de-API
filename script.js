@@ -1,25 +1,45 @@
-async function consultarDados() {
-    const cep = document.getElementById('cep').value;
-    const cidade = document.getElementById('cidade').value;
-    const resultadoDiv = document.getElementById('resultado');
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o formulário e os campos de entrada
+    const form = document.querySelector('#my-form');
+    const firstNameInput = document.querySelector('#primeiroNome');
+    const cepInput = document.querySelector('#cep');
     
-    try {
-        // Consulta de CEP
-        const cepResponse = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        const cepData = await cepResponse.json();
-        
-        // Consulta de previsão do tempo
-        const weatherResponse = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${cepData.latitude}&longitude=${cepData.longitude}&hourly=temperature_2m`);
-        const weatherData = await weatherResponse.json();
-        
-        // Atualiza a interface com os dados
-        resultadoDiv.innerHTML = `
-            <h3>Resultado</h3>
-            <p><strong>CEP:</strong> ${cepData.cep}</p>
-            <p><strong>Localidade:</strong> ${cepData.localidade}</p>
-            <p><strong>Temperatura Atual:</strong> ${weatherData.hourly.temperature_2m[0]}°C</p>
-        `;
-    } catch (error) {
-        resultadoDiv.innerHTML = `<p>Erro ao consultar os dados. Verifique o CEP e a cidade fornecidos.</p>`;
-    }
-}
+    // Seleciona as áreas onde os dados serão exibidos
+    const firstNameDisplay = document.querySelector('#new-layout-section-first-name');
+    const neighborhoodDisplay = document.querySelector('#new-layout-section-neighborhood');
+    const stateDisplay = document.querySelector('#new-layout-section-state');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Obtém os valores dos campos
+        const firstName = firstNameInput.value;
+        const cep = cepInput.value;
+
+        // Atualiza o nome na div
+        if (firstNameDisplay) {
+            firstNameDisplay.textContent = firstName;
+        }
+
+        // Faz a busca pelo CEP
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => response.json())
+            .then(data => {
+                // Atualiza o bairro e o UF na div
+                if (data.bairro && data.uf) {
+                    if (neighborhoodDisplay) {
+                        neighborhoodDisplay.textContent = data.bairro;
+                    }
+                    if (stateDisplay) {
+                        stateDisplay.textContent = data.uf;
+                    }
+                } else {
+                    alert('Não foi possível encontrar o CEP. Verifique e tente novamente.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar o CEP:', error);
+                alert('Erro ao buscar o CEP. Verifique sua conexão e tente novamente.');
+            });
+    });
+});
