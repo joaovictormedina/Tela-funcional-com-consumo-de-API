@@ -228,15 +228,7 @@ body {
     font-weight: 400;
     text-align: center;
     width: 30%;
-}
-
-input#nome:focus,
-input#bairro-local:focus,
-input#uf:focus {
-    outline: none;
-    /* Remove o contorno padrão ao focar nos inputs */
-    border-color: transparent;
-    /* Remove qualquer borda visível ao focar */
+    /* Ajuste para distribuir igualmente */
 }
 
 .weather-info-section {
@@ -270,43 +262,7 @@ input#uf:focus {
     border-radius: 30px;
     opacity: 0px;
     background: rgba(255, 255, 255, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(12, 112, 242, 1);
-}
-
-input.temp#resposta {
-    border: none;
-    /* Remove a borda */
-    outline: none;
-    width: 100px;
-
-    /* Remove o contorno ao focar no input */
-}
-
-input.form-control-address#nome {
-    border: none;
-    /* Remove a borda */
-    outline: none;
-    background-color: white;
-    text-align: center;
-}
-
-input.form-control-address#bairro-local {
-    border: none;
-    /* Remove a borda */
-    outline: none;
-    background-color: white;
-    text-align: center;
-}
-
-input.form-control-address#uf {
-    border: none;
-    /* Remove a borda */
-    outline: none;
-    background-color: white;
-    text-align: center;
+    border: 1px solid rgba(12, 112, 242, 1)
 }
 
 .custom-layout-content {
@@ -320,25 +276,4 @@ input.form-control-address#uf {
     font-weight: 800;
     line-height: 24.2px;
     text-align: center;
-}
-
-.third-div {
-    background: #0C70F2;
-    width: 100vw;
-    height: 94px;
-    top: 2889px;
-    left: -1px;
-    gap: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-
-.third-div-content p {
-    font-size: 25px;
-    letter-spacing: 1.5px;
-    font-weight: 300;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
-    margin-right: 50px;
 }
