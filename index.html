@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Primeira Divisão -->
     <header class="header">
@@ -28,54 +30,51 @@
             </div>
             <img src="img/nuvens.svg" alt="Nuvens" class="clouds-image">
         </div>
-        
+
         <!-- Retângulo Branco com Formulário -->
         <div class="container white-rectangle">
             <div class="form-container">
                 <div id="form-Name" class="form-group">
                     <label for="primeiroNome">Primeiro Nome:</label>
-                    <input id="form-type" type="text" id="primeiroNome" placeholder="Insira seu primeiro nome" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input id="form-type" type="email" id="email" placeholder="Insira seu e-mail" class="form-control">
+                    <input id="primeiroNome" type="text" placeholder="Insira seu primeiro nome" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="cep">Digite o CEP:</label>
-                    <input id="form-type" type="text" id="cep" placeholder="Insira o CEP" class="form-control">
+                    <input id="cep" type="text" placeholder="Insira o CEP" class="form-control">
                 </div>
+                <button id="getAddressByCep" type="button" class="btn btn-primary">Enviar</button>
                 <div class="form-group">
                     <p>Digite a latitude e longitude para saber a previsão:</p>
                 </div>
-                <div class="form-grouplat-long-container">
-                    <input id="form-lati" type="text" id="latitude" placeholder="Latitude" class="form-control">
-                    <input id="form-long" type="text" id="longitude" placeholder="Longitude" class="form-control">
+                <div class="form-group lat-long-container">
+                    <input id="latitude" type="text" placeholder="Latitude" class="form-control">
+                    <input id="longitude" type="text" placeholder="Longitude" class="form-control">
                 </div>
-                <button type="button" class="btn btn-primary">Acessar</button>
+                <button id="getPrevisao" type="button" class="btn btn-primary">Enviar</button>
             </div>
         </div>
 
         <!-- Novo Texto e Imagem -->
         <div class="result-section">
             <p class="result-text">Resultado da busca por CEP:</p>
-            <img src="img/local.svg" alt="Local" class="result-image"> <!-- Alterado para "local.svg" -->
+            <img src="img/local.svg" alt="Local" class="result-image">
         </div>
 
         <!-- Layout abaixo do texto e imagem -->
         <div class="layout-section">
             <div class="layout-content">
-                <p>Logradouro/nome</p>
-                <p>Bairro/Distrito</p>
-                <p>Localidade/UF</p>
+                <p id="logradouro">Logradouro/nome</p>
+                <p id="bairro">Bairro/Distrito</p>
+                <p id="localidade">Localidade/UF</p>
             </div>
         </div>
 
         <!-- Novo Layout Abaixo do Layout Anterior -->
         <div class="new-layout-section">
             <div class="new-layout-content">
-                <p>Justino Cobra</p>
-                <p>Vila Ema</p>
-                <p>SP</p>
+                <input type="text" readonly class="form-control-address" id="nome" value="">
+                <input type="text" readonly class="form-control-address" id="bairro-local" value="">
+                <input type="text" readonly class="form-control-address" id="uf" value="">
             </div>
         </div>
 
@@ -84,16 +83,27 @@
             <p class="weather-info-text">Previsão do tempo na região:</p>
             <img src="img/tempo.svg" alt="Tempo" class="weather-info-image">
         </div>
-    
+
         <!-- Novo Layout Abaixo do Layout Anterior -->
         <div class="custom-layout-section">
             <div class="custom-layout-content">
-                <p>Previsão de tempo de acordo com a região: 24° C</p>
+                <p>Previsão de tempo de acordo com a região: <input type="text" readonly class="temp" id="resposta"
+                        value="">
+                </p>
             </div>
+        </div>
+    </div>
+
+    <!-- Terceira Divisão -->
+    <div class="third-div">
+        <div class="third-div-content">
+            <p>Termos de Uso | Política de Privacidade</p>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
